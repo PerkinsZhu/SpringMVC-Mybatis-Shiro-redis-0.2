@@ -58,8 +58,7 @@ public class SampleRealm extends AuthorizingRealm {
 	/**
 	 *  认证信息，主要针对用户登录， 
 	 */
-	protected AuthenticationInfo doGetAuthenticationInfo(
-			AuthenticationToken authcToken) throws AuthenticationException {
+	protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authcToken) throws AuthenticationException {
 		
 		ShiroToken token = (ShiroToken) authcToken;
 		UUser user = userService.login(token.getUsername(),token.getPswd());
